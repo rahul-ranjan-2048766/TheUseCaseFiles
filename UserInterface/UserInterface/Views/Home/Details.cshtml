@@ -1,0 +1,508 @@
+﻿@model List<UserInterface.Models.TableBill>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        body {
+            position: relative;
+            overflow-x: hidden;
+            background-color: #ffffff;
+        }
+
+        body,
+        html {
+            height: 100%;
+            
+        }
+
+        body {
+            background: #00008020;
+        }
+
+        .nav .open > a,
+        .nav .open > a:hover,
+        .nav .open > a:focus {
+            background-color: transparent;
+        }
+
+        /*-------------------------------*/
+        /*                     */
+        /*-------------------------------*/
+
+        #home {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+            #home.toggled {
+                padding-left: 220px;
+            }
+
+        #sidebar-home {
+            z-index: 1000;
+            left: 220px;
+            width: 0;
+            height: 100%;
+            margin-left: -220px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: #191970a0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+            #sidebar-home::-webkit-scrollbar {
+                display: none;
+            }
+
+        #home.toggled #sidebar-home {
+            width: 220px;
+        }
+
+        #page-content-home {
+            width: 100%;
+            padding-top: 70px;
+        }
+
+        #home.toggled #page-content-home {
+            position: absolute;
+            margin-right: -220px;
+        }
+
+        /*-------------------------------*/
+        /*     Sidebar nav styles        */
+        /*-------------------------------*/
+        .navbar {
+            padding: 0;
+        }
+
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 220px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            .sidebar-nav li {
+                cursor: pointer;
+                position: relative;
+                line-height: 20px;
+                display: inline-block;
+                width: 100%;
+                padding-top: 2px;
+                color: #ffffff;
+                padding-bottom: 2px;
+                font-weight: 100;
+                padding-left: 40px;
+            }
+
+                .sidebar-nav li:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    height: 100%;
+                    width: 0px;
+                    background-color: #1c1c1c;
+                    -webkit-transition: width .2s ease-in;
+                    -moz-transition: width .2s ease-in;
+                    -ms-transition: width .2s ease-in;
+                    transition: width .2s ease-in;
+                }
+
+                .sidebar-nav li:nth-child(3):hover,
+                .sidebar-nav li:nth-child(4):hover,
+                .sidebar-nav li:nth-child(5):hover,
+                .sidebar-nav li:nth-child(6):hover {
+                    background: #191970c0 !important;
+                }
+
+                .sidebar-nav li:nth-child(3) {
+                    background: #191970c0 !important;
+                }
+
+                .sidebar-nav li:nth-child(2),
+                .sidebar-nav li:nth-child(7){
+                    cursor: default;
+                }
+                
+                .sidebar-nav li a {
+                    display: block;
+                    color: #ddd;
+                    text-decoration: none;
+                    padding: 10px 15px 10px 0px;
+                    color: #ffffff;
+                    letter-spacing: 1px;
+                    font-size: 13px;
+                    font-weight: 100;
+                } 
+                
+                .sidebar-nav li a:hover, .sidebar-nav li a:active, .sidebar-nav li a:focus, .sidebar-nav li.open a:hover, .sidebar-nav li.open a:active, .sidebar-nav li.open a:focus {
+                        color: #fff;
+                        text-decoration: none;
+                        background-color: transparent;
+                    } 
+                  
+            .sidebar-header {
+                text-align: center;
+                font-size: 20px;
+                position: relative;
+                width: 100%;
+                display: inline-block;
+            } 
+                  
+            .sidebar-brand {
+                height: 65px;
+                position: relative;
+                /*background: #212531;
+                background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%);*/
+                padding-top: 1em;
+            } 
+            
+            .sidebar-brand a {
+                color: #ddd;
+            } 
+            
+            .sidebar-brand a:hover {
+                color: #fff;
+                text-decoration: none;
+            } 
+            
+            .dropdown-header {
+                text-align: center;
+                font-size: 1em;
+                color: #ddd;
+                background: #212531;
+                background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%);
+            } 
+            
+            .sidebar-nav .dropdown-menu {
+                position: relative;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                border-radius: 0;
+                border: none;
+                background-color: #222;
+                box-shadow: none;
+            } 
+            
+            .dropdown-menu.show {
+                top: 0;
+            } 
+            
+            .hamburger {
+                position: fixed;
+                top: 20px;
+                z-index: 999;
+                display: block;
+                width: 32px;
+                height: 32px;
+                margin-left: 15px;
+                background: transparent;
+                border: none;
+            } 
+            
+            .hamburger:hover, .hamburger:focus, .hamburger:active {
+                outline: none;
+            } 
+            
+            .hamburger.is-closed:before {
+                content: '';
+                display: block;
+                width: 100px;
+                font-size: 14px;
+                color: #fff;
+                line-height: 32px;
+                text-align: center;
+                opacity: 0;
+                -webkit-transform: translate3d(0,0,0);
+                -webkit-transition: all .35s ease-in-out;
+            } 
+            
+            .hamburger.is-closed:hover:before {
+                opacity: 1;
+                display: block;
+                -webkit-transform: translate3d(-100px,0,0);
+                -webkit-transition: all .35s ease-in-out;
+            } 
+            
+            .hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom, .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom {
+                position: absolute;
+                left: 0;
+                height: 4px;
+                width: 100%;
+            } 
+            
+            .hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom {
+                background-color: #1a1a1a;
+            } 
+            
+            .hamburger.is-closed .hamb-top {
+                top: 5px;
+                -webkit-transition: all .35s ease-in-out;
+            } 
+            
+            .hamburger.is-closed .hamb-middle {
+                top: 50%;
+                margin-top: -2px;
+            } 
+            
+            .hamburger.is-closed .hamb-bottom {
+                bottom: 5px;
+                -webkit-transition: all .35s ease-in-out;
+            } 
+            
+            .hamburger.is-closed:hover .hamb-top {
+                top: 0;
+                -webkit-transition: all .35s ease-in-out;
+            } 
+            
+            .hamburger.is-closed:hover .hamb-bottom {
+                bottom: 0;
+                -webkit-transition: all .35s ease-in-out;
+            } 
+            
+            .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom {
+                background-color: #1a1a1a;
+            } 
+            
+            .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-bottom {
+                top: 50%;
+                margin-top: -2px;
+            } 
+            
+            .hamburger.is-open .hamb-top {
+                -webkit-transform: rotate(45deg);
+                -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+            } 
+            
+            .hamburger.is-open .hamb-middle {
+                display: none;
+            } 
+            
+            .hamburger.is-open .hamb-bottom {
+                -webkit-transform: rotate(-45deg);
+                -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+            } 
+            
+            .hamburger.is-open:before {
+                content: '';
+                display: block;
+                width: 100px;
+                font-size: 14px;
+                color: #fff;
+                line-height: 32px;
+                text-align: center;
+                opacity: 0;
+                -webkit-transform: translate3d(0,0,0);
+                -webkit-transition: all .35s ease-in-out;
+            } 
+            
+            .hamburger.is-open:hover:before {
+                opacity: 1;
+                display: block;
+                -webkit-transform: translate3d(-100px,0,0);
+                -webkit-transition: all .35s ease-in-out;
+            }
+
+        /*-------------------------------*/
+        /*            Overlay            */
+        /*-------------------------------*/
+
+        .card_cover {
+            cursor: pointer;
+            background: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            border-left: 2px solid transparent;
+        }
+
+            .card_cover:hover {
+                border-left: 2px solid #c71585;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+
+        .footer_font{
+            font-size: 10px;
+            color: #808080d0;
+        }
+
+        .p_tag{
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #808080d0;
+        }
+
+        .card_veil {
+            background: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+
+        .label_cover{
+            width: 100%;
+            padding: 2px;
+            padding-left: 8px;
+            pointer-events: none;
+        }
+
+        .icon{
+            width: 24px;
+            height: 24px;
+            filter: drop-shadow(1px 1px 1px #000000);
+        }
+
+        .input{
+            font-size: 12px;
+            padding-left: 40px;
+            color: #808080;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse fixed-top" id="sidebar-home" role="navigation">
+            <ul class="nav sidebar-nav">
+                <div class="sidebar-header">
+                    <div class="sidebar-brand" style="display:flex;align-items:center;padding-left: 30px;">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffffff" class="bi bi-strava" viewBox="0 0 16 16">
+                                <path d="M6.731 0 2 9.125h2.788L6.73 5.497l1.93 3.628h2.766L6.731 0zm4.694 9.125-1.372 2.756L8.66 9.125H6.547L10.053 16l3.484-6.875h-2.112z" />
+                            </svg>
+                            <a href="#" style="text-decoration: none; font-size: 20px; color:#ffffff;">Welcome!!</a>
+                        </div>
+                    </div>
+                </div>
+                <li style="display:flex;align-items:center;justify-content:space-around;text-align:center;">
+                    <img src="~/wwwroot/Statue of liberty_Monochromatic.svg" class="img-fluid" style="width: 80%; height: 26vh;filter:drop-shadow(1px 1px 1px #000000);" />
+                </li>
+                <li style="display:flex; align-items: center;" onclick="location.href = '@Url.Action("Details", "Home")'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z" />
+                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z" />
+                    </svg>&nbsp;&nbsp;
+                    <a>Dashboard</a>
+                </li>
+                <li style="display:flex; align-items: center;" onclick="location.href = '@Url.Action("About", "Home")'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg>&nbsp;&nbsp;
+                    <a>About</a>
+                </li>
+                <li style="display:flex; align-items: center;" onclick="location.href = '@Url.Action("Developers", "Home")'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z" />
+                    </svg>&nbsp;&nbsp;
+                    <a>Developers</a>
+                </li>
+                <li style="display:flex; align-items: center;" onclick="location.href = '@Url.Action("Index", "Home")'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L8 2.207l6.646 6.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                        <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Zm0 5.189c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z" />
+                    </svg>&nbsp;&nbsp;
+                    <a>Let us get Home</a>
+                </li>
+                <li style="display:flex;align-items:center;justify-content:space-around;text-align:center;">
+                    <img src="~/wwwroot/butterfly.png" class="img-fluid" style="width: 80%; height: 26vh;filter:drop-shadow(1px 1px 1px #000000);" />
+                </li>
+            </ul>
+        </nav>
+
+        <div id="page-content-home">
+            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+            <div class="container px-5">
+                <div class="row px-3">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        @using (Html.BeginForm("SearchTransaction", "Home", FormMethod.Post, new { @class="col-lg-8 m-0 p-2 card_veil" }))
+                        {
+                            @Html.AntiForgeryToken()
+                        <div class="position-relative">
+                            <input type="number" class="form-control input" placeholder="Search by The Credit Card Number" name="TheCreditCardNumber" required />
+                            <label class="position-absolute top-0 end-0 label_cover">
+                                <img src="~/wwwroot/butterfly.png" class="icon"/>
+                            </label>
+                        </div>
+                            
+                        }
+                        <div class="p-4"></div>
+                        @foreach (var d in Model)
+                        {
+                        <div class="card_cover p-0 m-0 col-lg-8">
+                            <div class="row p-2 m-0">
+                                <div class="col-lg-6 m-0 p-0">
+                                    <p class="p_tag">Transaction Id : @d.TransactionId</p>
+                                    <p class="p_tag">Credit Card Number : @d.CreditCardNumber</p>                                    
+                                </div>
+                                <div class="col-lg-6 m-0 p-0">
+                                    <p class="p_tag">Card Type : @d.CardType</p>
+                                    <p class="p_tag">Amount : @d.Amount</p>                                    
+                                </div>
+                            </div>
+                            <div class="card-footer footer_font p-2">Date & Time : @d.DateOfTransaction</div>
+                        </div>
+                <div class="p-2"></div>
+                            }
+
+                        <div class="p-5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var trigger = $('.hamburger'),
+                overlay = $('.overlay'),
+                isClosed = false;
+
+            $('#home').toggleClass('toggled');
+            overlay.show();
+            trigger.removeClass('is-closed');
+            trigger.addClass('is-open');
+            isClosed = true;
+
+            trigger.click(function () {
+                hamburger_cross();
+            });
+
+            function hamburger_cross() {
+
+                if (isClosed == true) {
+                    overlay.hide();
+                    trigger.removeClass('is-open');
+                    trigger.addClass('is-closed');
+                    isClosed = false;
+                } else {
+                    overlay.show();
+                    trigger.removeClass('is-closed');
+                    trigger.addClass('is-open');
+                    isClosed = true;
+                }
+            }
+
+            $('[data-toggle="offcanvas"]').click(function () {
+                $('#home').toggleClass('toggled');
+            });
+        });
+    </script>
+</body>
+</html>

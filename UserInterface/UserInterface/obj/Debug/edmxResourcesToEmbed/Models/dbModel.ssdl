@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseOfPaysTransactionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TableBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionId" Type="int" />
+    <Property Name="CreditCardNumber" Type="varchar(max)" />
+    <Property Name="CardType" Type="varchar(max)" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="DateOfTransaction" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="DatabaseOfPaysTransactionModelStoreContainer">
+    <EntitySet Name="TableBill" EntityType="Self.TableBill" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

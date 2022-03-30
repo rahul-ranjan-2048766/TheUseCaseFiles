@@ -1,0 +1,62 @@
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\appsettings.json
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Pays Transaction.exe
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Pays Transaction.deps.json
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Pays Transaction.runtimeconfig.json
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Pays Transaction.runtimeconfig.dev.json
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Pays Transaction.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\ref\Pays Transaction.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Pays Transaction.pdb
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.csproj.AssemblyReference.cache
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.AssemblyInfoInputs.cache
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.AssemblyInfo.cs
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.csproj.CoreCompileInputs.cache
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\staticwebassets\Pays Transaction.StaticWebAssets.Manifest.cache
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\staticwebassets\Pays Transaction.StaticWebAssets.xml
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\scopedcss\bundle\Pays Transaction.styles.css
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.RazorTargetAssemblyInfo.cache
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.csproj.CopyComplete
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\ref\Pays Transaction.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.pdb
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\obj\Debug\net5.0\Pays Transaction.genruntimeconfig.cache
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Humanizer.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\log4net.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\2048766\AngularWebsites\UseCase\Pays Transaction\Pays Transaction\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
